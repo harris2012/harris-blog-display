@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = ViewBag.PostEntity.Title;
+    var post = ViewBag.PostEntity as Repository.Entity.PostEntity;
+}
+
+@section scripts{
+    <script>
+        $(function () {
+            var postSharer = new Headroom(document.getElementById("post-bottom-bar"), {
+                tolerance: 0,
+                offset: 70,
+                classes: {
+                    initial: "animated",
+                    pinned: "pinned",
+                    unpinned: "unpinned"
+                }
+            });
+            postSharer.init();
+
+            $('#qrcode').qrcode("this plugin is great");
+        })
+    </script>
+}
+
+<!--div class="post-header-thumb bg-deepgrey" style="background-image: url('/images/thumbs/1.jpg');"-->
+<div class="post-header-thumb bg-deepgrey">
+    <div class="post-header-thumb-op" style="background-image: url('/post-images/1.jpg');"></div>
+    <div class="post-header-thumb-cover">
+        <div class="post-header-thumb-container">
+            <div class="post-header-thumb-title">@post.Title</div>
+            <div class="post-header-thumb-meta">
+                <time datetime="2018" itemprop="datePublished">Published on @post.PublishTime</time> in Category with <a href="#comments">comments</a>
+            </div>
+            <div class="post-tags">
+                tags
+            </div>
+        </div>
+    </div>
+</div>
+
+<article class="main-content post-page">
+    <div id="post-content" class="post-content" itemprop="articleBody">
+
+        @(new MvcHtmlString(post.Body))
+
+    </div>
+
+</article>
+
+<div id="qrcode" style="display:none"></div>
+
+<div id="post-bottom-bar" class="post-bottom-bar">
+    <div class="bottom-bar-inner">
+        <span class="bottom-bar-item">Share To </span>
+        <a href="#" target="_blank" title="titlte" rel="nofollow" class="bottom-bar-item bottom-bar-facebook">facebook</a>
+        <a href="#" target="_blank" title="titlte" rel="nofollow" class="bottom-bar-item bottom-bar-twitter">Twitter</a>
+        <a href="#" target="_blank" title="titlte" rel="nofollow" class="bottom-bar-item bottom-bar-weibo">Weibo</a>
+        <a href="#" target="_blank" title="title" rel="nofollow" class="bottom-bar-item bottom-bar-qrcode">Wechat</a>
+    </div>
+</div>
