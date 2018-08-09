@@ -1,5 +1,5 @@
 ﻿@{
-    List<HarrisZhang.Vo.SummaryVo> postEntityList = ViewBag.PostsList as List<HarrisZhang.Vo.SummaryVo>;
+    List<HarrisZhang.Blog.Display.Vo.SummaryVo> postEntityList = ViewBag.PostsList as List<HarrisZhang.Blog.Display.Vo.SummaryVo>;
 }
 
 @section styles{
@@ -87,7 +87,7 @@
         </div>
     }
 
-    @HarrisZhang.Controls.PadingControl.Paging(ViewBag.PageIndex, ViewBag.PageCount, 5, "/posts/{0}")
+    @HarrisZhang.Blog.Display.Controls.PadingControl.Paging(ViewBag.PageIndex, ViewBag.PageCount, 5, "/posts/{0}")
 </div>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
