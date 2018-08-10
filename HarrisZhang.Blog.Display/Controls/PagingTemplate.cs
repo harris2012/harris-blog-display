@@ -18,7 +18,7 @@ namespace HarrisZhang.Blog.Display.Controls
     /// Class to produce the template output
     /// </summary>
     
-    #line 1 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang\Controls\PagingTemplate.tt"
+    #line 1 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang.Blog.Display\Controls\PagingTemplate.tt"
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.TextTemplating", "15.0.0.0")]
     public partial class PagingTemplate : PagingTemplateBase
     {
@@ -30,7 +30,7 @@ namespace HarrisZhang.Blog.Display.Controls
         {
             this.Write("<div class=\"lists-navigator\">\r\n");
             
-            #line 7 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang\Controls\PagingTemplate.tt"
+            #line 7 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang.Blog.Display\Controls\PagingTemplate.tt"
 
     if(this.PageCount > 1)
     {
@@ -42,14 +42,14 @@ namespace HarrisZhang.Blog.Display.Controls
             #line hidden
             this.Write("    <a href=\"");
             
-            #line 13 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang\Controls\PagingTemplate.tt"
+            #line 13 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang.Blog.Display\Controls\PagingTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(string.Format(this.UrlTemplate, 1)));
             
             #line default
             #line hidden
             this.Write("\">1</a>\r\n    <span>...</span>\r\n");
             
-            #line 15 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang\Controls\PagingTemplate.tt"
+            #line 15 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang.Blog.Display\Controls\PagingTemplate.tt"
 
         }
         for (int i = this.StartPage; i <= this.EndPage; i++)
@@ -62,14 +62,14 @@ namespace HarrisZhang.Blog.Display.Controls
             #line hidden
             this.Write("    <a class=\"current\">");
             
-            #line 22 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang\Controls\PagingTemplate.tt"
+            #line 22 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang.Blog.Display\Controls\PagingTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(i));
             
             #line default
             #line hidden
             this.Write("</a>\r\n");
             
-            #line 23 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang\Controls\PagingTemplate.tt"
+            #line 23 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang.Blog.Display\Controls\PagingTemplate.tt"
 
             }
             else
@@ -80,21 +80,21 @@ namespace HarrisZhang.Blog.Display.Controls
             #line hidden
             this.Write("    <a href=\"");
             
-            #line 28 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang\Controls\PagingTemplate.tt"
+            #line 28 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang.Blog.Display\Controls\PagingTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(string.Format(this.UrlTemplate, i)));
             
             #line default
             #line hidden
             this.Write("\">");
             
-            #line 28 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang\Controls\PagingTemplate.tt"
+            #line 28 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang.Blog.Display\Controls\PagingTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(i));
             
             #line default
             #line hidden
             this.Write("</a>\r\n");
             
-            #line 29 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang\Controls\PagingTemplate.tt"
+            #line 29 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang.Blog.Display\Controls\PagingTemplate.tt"
 
             }
         }
@@ -106,21 +106,21 @@ namespace HarrisZhang.Blog.Display.Controls
             #line hidden
             this.Write("    <span>...</span>\r\n    <a href=\"");
             
-            #line 36 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang\Controls\PagingTemplate.tt"
+            #line 36 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang.Blog.Display\Controls\PagingTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(string.Format(this.UrlTemplate, this.PageCount)));
             
             #line default
             #line hidden
             this.Write("\">");
             
-            #line 36 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang\Controls\PagingTemplate.tt"
+            #line 36 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang.Blog.Display\Controls\PagingTemplate.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(this.PageCount));
             
             #line default
             #line hidden
             this.Write("</a>\r\n");
             
-            #line 37 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang\Controls\PagingTemplate.tt"
+            #line 37 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang.Blog.Display\Controls\PagingTemplate.tt"
 
         }
     }
@@ -132,7 +132,7 @@ namespace HarrisZhang.Blog.Display.Controls
             #line hidden
             this.Write("    <span class=\"current\">1</span>\r\n");
             
-            #line 44 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang\Controls\PagingTemplate.tt"
+            #line 44 "D:\TheGitlabWorkspace\harriszhang\harris-blog-display\HarrisZhang.Blog.Display\Controls\PagingTemplate.tt"
 
     }
 

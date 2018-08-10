@@ -1,6 +1,7 @@
 ﻿using HarrisZhang.Blog.Display.Repository;
 using HarrisZhang.Blog.Display.Vo;
 using HarrisZhang.Blog.Repository.Entity;
+using HeyRed.MarkdownSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +27,10 @@ namespace HarrisZhang.Blog.Display.Controllers
             {
                 return HttpNotFound();
             }
+
+            Markdown markdown = new Markdown();
+
+            entity.Body = markdown.Transform(entity.Body);
 
             ViewBag.PostEntity = entity;
 
