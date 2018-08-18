@@ -50,18 +50,16 @@
 }
 
 
-
-<div class="main-content talks-page">
+<div class="ui container">
 
     @if (postEntityList != null)
     {
-        <div class="talk-item-list">
-            @foreach (var item in postEntityList)
+            foreach (var item in postEntityList)
             {
-                <div class="talk-item">
+                <div class="ui segment">
                     @if (item.ItemType == 1)
                     {
-                        <h2><a href="~/post/@item.Ename">@item.Title</a></h2>
+                        <p class="post_title"><a href="~/post/@item.Ename">@item.Title</a></p>
                         <div class="item-desc"><p><a href="~/post/@item.Ename">@item.Body</a></p></div>
                         <div class="talk-time">
                             <span>@item.PublishTime.Value.ToString("yyyy-MM-dd")</span>
@@ -85,10 +83,19 @@
                     }
                 </div>
             }
-        </div>
     }
 
-    @HarrisZhang.Blog.Display.Controls.PadingControl.Paging(ViewBag.PageIndex, ViewBag.PageCount, 5, "/posts/{0}")
+</div>
+
+<div class="ui container post_paging">
+    @if (ViewBag.PageIndex > 1)
+    {
+        <a class="ui button" href="@string.Format("/posts/{0}", ViewBag.PageIndex - 1)">Prev</a>
+    }
+    @if (ViewBag.PageIndex < ViewBag.PageCount)
+    {
+    <a class="ui button" href="@string.Format("/posts/{0}", ViewBag.PageIndex + 1)">Next</a>
+    }
 </div>
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->

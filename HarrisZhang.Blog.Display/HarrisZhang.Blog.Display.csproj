@@ -117,13 +117,6 @@
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
-    <Compile Include="Controls\PadingControl.cs" />
-    <Compile Include="Controls\PagingTemplate.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PagingTemplate.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\PagingTemplatePartial.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -141,10 +134,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="baidu_verify_vzHzQ5N6WU.html" />
-    <Content Include="Controls\PagingTemplate.tt">
-      <Generator>TextTemplatingFilePreprocessor</Generator>
-      <LastGenOutput>PagingTemplate.cs</LastGenOutput>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="images\logo.png" />
@@ -172,12 +161,7 @@
     <Content Include="_500.html" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="styles\_basic.less" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="styles\harriszhang.less" />
-    <Content Include="styles\_bgColor.less" />
-    <Content Include="styles\_browsehappy.less" />
   </ItemGroup>
   <ItemGroup>
     <None Include="compilerconfig.json" />
@@ -185,14 +169,6 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="Views\About\Index.cshtml" />
-    <Content Include="styles\_about_page.less" />
-    <Content Include="styles\_post_page.less" />
-    <Content Include="styles\_talks_page.less" />
-    <Content Include="styles\_common_page.less" />
-    <Content Include="styles\_comment.less" />
-    <Content Include="styles\_footer.less" />
-    <Content Include="styles\_header.less" />
-    <Content Include="styles\_navbar.less" />
     <Content Include="Views\Shared\_Header.cshtml" />
     <Content Include="Views\Shared\_Footer.cshtml" />
   </ItemGroup>

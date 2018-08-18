@@ -1,562 +1,98 @@
-﻿@import "_basic.less";
-@import "_browsehappy.less";
-@import "_bgColor.less";
-
-@import "_post_page.less";
-@import "_talks_page.less";
-@import "_about_page.less";
-@import "_basic.less";
-@import "_bgColor.less";
-@import "_browsehappy.less";
-@import "_comment.less";
-@import "_common_page.less";
-@import "_footer.less";
-@import "_header.less";
-@import "_navbar.less";
-
-.text-white {
-    color: #fff !important;
-}
-
-
-.MathJax_Display {
-    overflow-x: auto;
-    overflow-y: hidden;
-}
-
-.MathJax {
-    outline: 0;
-
-    span {
-        font-size: 15px;
-    }
-}
-
-/*#instantclick-bar {
-    background-color: #eb5055;
-}*/
-
-.icon-menu {
-    position: relative;
-    display: inline-block;
-    width: 20px;
-    height: 12px;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-    -webkit-transition-timing-function: cubic-bezier(.61,.04,.17,1.32);
-    transition-timing-function: cubic-bezier(.61,.04,.17,1.32);
-
-    .middle {
-        position: absolute;
-        top: 50%;
-        left: -.25em;
-        display: inline-block;
-        width: 20px;
-        height: 2px;
-        margin-top: -1px;
-        -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;
-        background: #313131;
-    }
-
-    &:after, &:before {
-        position: absolute;
-        left: -.25em;
-        width: 20px;
-        height: 2px;
-        content: '';
-        -webkit-transition: all .4s ease-in-out;
-        transition: all .4s ease-in-out;
-        -webkit-transform-origin: 50% 50% 0;
-        -ms-transform-origin: 50% 50% 0;
-        transform-origin: 50% 50% 0;
-        background: #313131;
-    }
-
-    &:after {
-        bottom: 0;
-    }
-
-    &:before {
-        top: 0;
-    }
-}
-
-.main-content {
-    position: relative;
-    max-width: 940px;
-    margin: 70px auto;
-    -webkit-animation: fade-in .5s;
-    animation: fade-in;
-    animation-duration: .5s;
-}
-
-
-.archive-page .post-item:hover, .common-page .post-item:hover, .related-post-lists .post-item:hover {
-    -webkit-transition-duration: .3s;
-    transition-duration: .3s;
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
-}
-
-.directory-content {
-    position: relative;
-    z-index: 0;
-    max-width: 720px;
-    margin-right: auto !important;
-    margin-left: auto !important;
-    text-align: right;
-    opacity: 0;
-
-    &.initial {
-        opacity: 0;
-    }
-
-    &.pinned {
-        opacity: 1;
-    }
-
-    &.unpinned {
-        opacity: 1;
-    }
-
-    &.headroom--top {
-        opacity: 0;
-    }
-
-    &.headroom--not-top {
-        -webkit-transition: opacity .5s ease-in-out;
-        transition: opacity .5s ease-in-out;
-        opacity: 1;
-    }
-}
-
-
-
-
-
-
-.lists-navigator {
-    margin: 30px 0 35px;
-    padding: 0 10px;
-    list-style: none;
+﻿.browsehappy {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
     text-align: center;
-
-    a, span {
-        display: inline-block;
-        color: #5f5f5f;
-        font-size: 14px;
-        padding: 0 15px;
-        color: #5f5f5f;
-    }
+    color: #8a1f11;
+    background: #fbe3e4;
 
     a {
-        &.current, &:hover {
-            color: #eb5055;
-        }
+        font-weight: 700;
+        text-decoration: underline;
+        color: #8a1f11;
     }
 }
 
-
-@media(max-width:1000px) {
-    .directory-content {
-        display: none;
-    }
-
-    .post-header-thumb {
-        height: 280px;
-    }
-
-    .post-header-thumb-cover {
-        height: 280px;
-    }
-
-    .post-header-thumb-op {
-        height: 280px;
-    }
-
-    .post-header-thumb-container {
-        top: 70px;
-    }
+/*通用设置开始*/
+body {
+    background-color: #f7f7f7 !important;
 }
 
-@media(max-width:880px) {
-    .index-page {
-        //padding: 80px 0 0;
-    }
-
-    .archive-page {
-        padding: 80px 0 20px;
-    }
-
-    .common-page {
-        padding: 80px 0 0;
-    }
-
-    .post-onelist-item-container {
-        padding: 50px 20px 55px;
-    }
-
-    .post-item {
-        width: 50%;
-        padding: 10px;
-    }
-
-    .post-item:nth-child(odd) {
-        padding-left: 20px;
-    }
-
-    .post-item:nth-child(even) {
-        padding-right: 20px;
-    }
-
-    .lists-navigator {
-        margin: 25px 0 30px;
-    }
-
-    .post-header-thumb {
-        height: 250px;
-    }
-
-    .post-header-thumb-op {
-        height: 250px;
-    }
-
-    .post-header-thumb-cover {
-        height: 250px;
-    }
-
-    .post-header-thumb-container {
-        top: 60px;
-    }
-
-    .footer-meta .footer-container {
-        padding: 0;
-    }
-
-    .main-content {
-        //margin: 0 auto;
-    }
-
-    .footer-meta .meta-item {
-        padding: 0 20px;
-    }
+footer {
+    padding: 5em 0em;
 }
 
-@media(max-width:700px) {
-    .comment-form .input-control {
-        max-width: 100%;
-    }
+a {
+    text-decoration: none;
+    color: #313131;
+    outline: 0;
 
-    .post-header-thumb {
-        height: 220px;
-    }
-
-    .post-header-thumb-op {
-        height: 220px;
-    }
-
-    .post-header-thumb-cover {
-        height: 220px;
-    }
-
-    .post-header-thumb-container {
-        top: 40px;
-    }
-
-    .post-page {
-        padding: 20px 25px 0;
-    }
-
-    .page-page {
-        padding: 90px 25px 0;
-    }
-
-    .search-page .search-tags {
-        padding: 0 0 15px;
-    }
-
-    .search-page .search-tags p {
-        margin: 0;
-    }
-
-    .related-post-lists {
-        padding-top: 15px;
-    }
-
-    .post-onelist-item-container {
-        padding: 20px 20px 25px;
-    }
-
-    .post-onelist-item-container .onelist-item-thumb {
-        min-height: 240px;
+    &:active,
+    &:focus,
+    &:hover {
+        color: #eb5055;
+        outline: 0;
     }
 }
+/*通用设置结束*/
 
-@media(max-width:650px) {
-    .navbar-menu {
-        display: none;
-    }
+/*列表页开始*/
+.post_title {
+    margin-bottom: 10px;
+    border-left: solid 2px;
+    padding-left: 20px;
+    border-color: #50b8f5;
+}
 
-    .navbar-search {
-        padding: 0 35px 0 0;
-    }
+.talk-content {
+    margin-bottom: 10px;
+}
 
-    .navbar-search form {
-        width: 180px;
-        margin-right: 55px;
-    }
+.talk-image-list {
+    list-style: none;
+    padding: 0;
 
-    .navbar-mobile-menu {
+    li {
         display: inline-block;
-    }
+        width: 260px;
+        overflow: hidden;
+        vertical-align: top;
 
-    .red-gradient {
-        display: none;
-    }
-
-    .meta-posts {
-        display: none;
-    }
-
-    .meta-comments {
-        display: none;
-    }
-
-    .post-bottom-bar {
-        display: none;
-    }
-
-    .post-page {
-        padding: 90px 25px 0;
-    }
-
-    .common-page .post-item {
-        width: 100%;
-        padding: 10px 20px;
-    }
-
-    .footer-social {
-        display: none;
-    }
-
-    .footer-meta {
-
-        .footer-container {
-            height: 70px;
-            padding: 0 15px;
-        }
-
-        .meta-item {
+        img {
             width: 100%;
-            padding: 0 10px;
-        }
-
-        .meta-copyright .info-text {
-            float: right;
-        }
-
-        .meta-copyright .info-text p {
-            text-align: right;
-        }
-    }
-
-    .post-onelist-item-container .onelist-item-thumb {
-        min-height: 220px;
-    }
-
-    .post-header-thumb {
-        display: none;
-    }
-
-    .post-page {
-        .post-header {
-            display: inherit;
-        }
-
-        .post-content .post-tags {
-            display: inherit;
         }
     }
 }
 
-@media(max-width:580px) {
-    .navbar-search form {
-        width: 150px;
+.talk-time {
+    display: inline-block;
+}
+
+.post_paging {
+    margin-top: 20px;
+}
+/*列表页结束*/
+
+/*文章页开始*/
+.post_container {
+
+    blockquote {
+        margin-bottom: 1em;
     }
 
-    .index-page {
-        //padding: 70px 0 0;
-    }
-
-    .archive-page {
-        padding: 70px 0 20px;
-    }
-
-    .common-page {
-        padding: 70px 0 0;
-    }
-
-    .post-item {
+    img {
         width: 100%;
-        padding: 10px 20px;
-    }
-
-    .post-item:first-child {
-        padding-top: 20px;
-    }
-
-    .archive-page .post-item:first-child {
-        padding-top: 0;
-    }
-
-    .archive-page .post-item:last-child {
-        padding-bottom: 0;
-    }
-
-    .common-page .post-item:first-child {
-        padding-top: 0;
-    }
-
-    .related-post-lists {
-        padding-top: 5px;
-    }
-
-    .main-content {
-        //margin: 0 auto;
-    }
-
-    .post-onelist-item-container {
-        padding: 20px 20px 25px;
-
-        .item-content {
-            display: none;
-        }
-
-        .item-readmore {
-            display: none;
-        }
-
-        .onelist-item-thumb {
-            min-height: 180px;
-        }
     }
 }
 
-@media(max-width:410px) {
-    .meta-copyright-info .info-logo {
-        display: none;
-    }
+blockquote {
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-left: 4px solid #ddd;
 }
-
-@-webkit-keyframes unpinned {
-    0% {
-        -webkit-transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(50px);
-    }
-}
-
-@keyframes unpinned {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(50px);
-        transform: translateY(50px);
-    }
-}
-
-@-webkit-keyframes pinned {
-    0% {
-        -webkit-transform: translateY(50px);
-    }
-
-    100% {
-        -webkit-transform: translateY(0);
-    }
-}
-
-@keyframes pinned {
-    0% {
-        -webkit-transform: translateY(50px);
-        transform: translateY(50px);
-    }
-
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
-@-webkit-keyframes slideDown {
-    0% {
-        -webkit-transform: translateY(-70px);
-    }
-
-    100% {
-        -webkit-transform: translateY(0);
-    }
-}
-
-@keyframes slideDown {
-    0% {
-        -webkit-transform: translateY(-70px);
-        transform: translateY(-70px);
-    }
-
-    100% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-}
-
-@-webkit-keyframes slideUp {
-    0% {
-        -webkit-transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(-70px);
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        -webkit-transform: translateY(0);
-        transform: translateY(0);
-    }
-
-    100% {
-        -webkit-transform: translateY(-70px);
-        transform: translateY(-70px);
-    }
-}
-
-@keyframes fade-in {
-    0% {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes fade-in {
-    0% {
-        -webkit-transform: translateY(20px);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateY(0);
-        opacity: 1;
-    }
-}
+/*文章页结束*/

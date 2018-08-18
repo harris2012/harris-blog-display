@@ -1,20 +1,10 @@
-﻿<header id="header" class="header bg-white">
-    <div class="navbar-container">
-        <a href="https://www.harriszhang.com" class="navbar-logo">
-            <img src="/images/logo.png" alt="从善如流" />
-        </a>
-        <div class="navbar-menu">
-            <a href="https://www.harriszhang.com/posts" class="@(ViewBag.Tab=="post"?"current":string.Empty)" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '语记', 'posts'])">语记</a>
-            <a href="https://www.harriszhang.com/trip/baidu.aspx" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '旅行', 'trip_baidu'])" rel="nofollow" target="_blank">旅行</a>
-            <a href="https://www.harriszhang.com/about" class="@(ViewBag.Tab=="about"?"current":string.Empty)" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '关于', 'about'])">关于</a>
-        </div>
-        <div class="navbar-mobile-menu" onclick="">
-            <span class="icon-menu cross"><span class="middle"></span></span>
-            <ul>
-                <li><a href="https://www.harriszhang.com/posts" class="@(ViewBag.Tab=="post"?"current":string.Empty)" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '语记', 'posts'])">语记</a></li>
-                <li><a href="https://www.harriszhang.com/trip/baidu.aspx" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '旅行', 'trip_baidu'])" rel="nofollow" target="_blank">旅行</a></li>
-                <li><a href="https://www.harriszhang.com/about" class="@(ViewBag.Tab=="about"?"current":string.Empty)" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '关于', 'about'])">关于</a></li>
-            </ul>
+﻿<header id="header" class="ui borderless main menu">
+    <div class="ui container">
+        <a href="@System.Configuration.ConfigurationManager.AppSettings["Host"]" class="ui item"><img src="/images/logo.png" alt="从善如流" style="width:auto;height:22px" /></a>
+        <div class="ui item right">
+            <a href="@System.Configuration.ConfigurationManager.AppSettings["Host"]posts" class="@(ViewBag.Tab=="post"?"ui item active":"ui item")" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '语记', 'posts'])">语记</a>
+            <a href="@System.Configuration.ConfigurationManager.AppSettings["Host"]trip/baidu.aspx" class="ui item" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '旅行', 'trip_baidu'])" rel="nofollow" target="_blank">旅行</a>
+            <a href="@System.Configuration.ConfigurationManager.AppSettings["Host"]about" class="@(ViewBag.Tab=="about"?"ui item active":"item")" onclick="_hmt.push(['_trackEvent', 'navbar', 'click', '关于', 'about'])">关于</a>
         </div>
     </div>
 </header>
