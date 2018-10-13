@@ -29,30 +29,6 @@ namespace HarrisZhang.Blog.Display.Biz
                 returnValue.Add(summary);
             }
 
-            TalkRepository talkRepository = new TalkRepository();
-            var talkEntityList = talkRepository.GetTalkEntityListData();
-            TalkImageRelationRepository talkImageRelationRepository = new TalkImageRelationRepository();
-            var talkImageRelationEntityList = talkImageRelationRepository.GetTalkImageRelationEntityList();
-            TalkImageOriginRepository talkImageOriginRepository = new TalkImageOriginRepository();
-            var talkImageOriginEntityList = talkImageOriginRepository.GetTalkImageOriginEntityList();
-
-            foreach (var talkEntity in talkEntityList)
-            {
-                SummaryVo summary = new SummaryVo();
-
-                summary.ItemType = 2;
-                summary.ItemId = talkEntity.Id;
-                summary.Body = talkEntity.Body;
-                summary.PublishTime = talkEntity.PublishTime;
-
-                summary.ImageList = (from talkImageRelation in talkImageRelationEntityList
-                                     join talkImageOrigin in talkImageOriginEntityList on talkImageRelation.ImageId equals talkImageOrigin.ImageId
-                                     where talkImageRelation.TalkId == talkEntity.TalkId
-                                     select new ImageVo { ImageUrl = talkImageOrigin.RemoteFilePath, Width = talkImageOrigin.Width, Height = talkImageOrigin.Height }).ToList();
-
-                returnValue.Add(summary);
-            }
-
             return returnValue;
         }
     }

@@ -124,9 +124,6 @@
     <Compile Include="Repository\ConnectionProvider.cs" />
     <Compile Include="Repository\PostRepository.cs" />
     <Compile Include="Biz\SummaryBiz.cs" />
-    <Compile Include="Repository\TalkImageOriginRepository.cs" />
-    <Compile Include="Repository\TalkImageRelationRepository.cs" />
-    <Compile Include="Repository\TalkRepository.cs" />
     <Compile Include="Repository\RepositoryBase.cs" />
     <Compile Include="Vo\ImageVo.cs" />
     <Compile Include="Vo\PostVo.cs" />
@@ -138,7 +135,6 @@
     <Content Include="Global.asax" />
     <Content Include="images\logo.png" />
     <Content Include="jq.snow.js" />
-    <Content Include="post-images\1.jpg" />
     <Content Include="robots.txt" />
     <Content Include="styles\harriszhang.css">
       <DependentUpon>harriszhang.less</DependentUpon>
